@@ -1,0 +1,33 @@
+﻿@model Lab8.Models.Student
+@{
+    ViewBag.Title = "Delete Student";
+}
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>FirstName</td>
+                <td>SurName</td>
+                <td>Group</td>
+                <td>AcademicPerformance</td>
+            </tr>
+        </thead>
+        <tbody>
+        <td>@Model.Id</td>
+        <td>@Model.FirstName</td>
+        <td>@Model.SurName</td>
+        <td>@Model.Group</td>
+        <td>@Model.AcademicPerformance</td>
+        </tbody>
+    </table>
+
+    <div>
+        <form asp-controller="Home" asp-action="Delete" method="post">
+            <div class="form-group">
+                <input type="submit" class="btn btn-outline-danger" value="Delete" />
+            </div>
+        </form>
+    </div>
+</div>

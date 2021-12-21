@@ -1,0 +1,27 @@
+﻿@model Lab8.Models.Student
+@{
+    ViewBag.Title = Model.FirstName + Model.SurName;
+}
+<h2>Sudent: @Model.FirstName @Model.SurName</h2>
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>FirstName</td>
+                <td>SurName</td>
+                <td>Group</td>
+                <td>AcademicPerformance</td>
+            </tr>
+        </thead>
+        <tbody>
+        <td>@Model.Id</td>
+        <td>@Model.FirstName</td>
+        <td>@Model.SurName</td>
+        <td>@Model.Group</td>
+        <td>@Model.AcademicPerformance</td>
+        </tbody>
+    </table>
+    <a asp-action="Edit" asp-controller="Home" class="btn btn-outline-dark" asp-route-id="@Model.Id">Edit</a>
+    <a asp-action="Delete" asp-controller="Home" class="btn btn-outline-danger" asp-route-id="@Model.Id">Delete</a>
+</div>
